@@ -5,6 +5,7 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --transition-speed: 600ms;
 }
 /* clean default padding and margin to start with clean */
 body {
@@ -57,6 +58,13 @@ main {
   height: 5rem;
   color: var(--text-primary);
   text-decoration: none;
+  filter: grayscale(100%) opacity(0.7) hue-rotate(0) brightness(120%);
+  transition: var(--transition-speed);
+}
+.nav-link:hover {
+  filter: grayscale(0) opacity(100%);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 .link-text {
   display: none;
@@ -72,4 +80,13 @@ main {
 }
 .navbar:hover .link-text {
   display: block;
+}
+.fa-primary {
+  color: #ff7eee;
+}
+.fa-secondary {
+  color: #df49a6;
+}
+.fa-primary .fa-secondary {
+  transition: var(--transition-speed);
 }
