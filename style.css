@@ -99,11 +99,17 @@ main {
   transform: rotate(0deg);
   transition: transform var(--transition-speed);
 }
-.navbar:hover .logo:hover {
+
+.navbar:hover .logo svg {
   transform: rotate(-180deg);
 }
 /* stop logo text from rotating */
-
+/* .logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+} */
 /* small screens  */
 /* puts navbar at bottom for app like experience on small screens */
 @media only screen and (max-width: 600px) {
