@@ -43,10 +43,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 .nav-item {
   width: 100%;
 }
+/* make the last nav-item be at bottom, to work navbar-nav must take 100% of height */
 .nav-item:last-child {
   margin-top: auto;
 }
@@ -103,13 +105,7 @@ main {
 .navbar:hover .logo svg {
   transform: rotate(-180deg);
 }
-/* stop logo text from rotating */
-/* .logo-text {
-  display: inline;
-  position: absolute;
-  left: -999px;
-  transition: var(--transition-speed);
-} */
+
 /* small screens  */
 /* puts navbar at bottom for app like experience on small screens */
 @media only screen and (max-width: 600px) {
